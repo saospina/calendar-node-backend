@@ -2,7 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
 const indexRoutesAuth = require('./src/routes/auth');
-const { dbConnection } = require('./src/database/config')
+const { dbConnection } = require('./src/database/config');
+const cors = require('cors')
 
 
 
@@ -12,6 +13,9 @@ const app = express();
 
 // DB connection
 dbConnection();
+
+//CORS
+app.use(cors())
 
 //Public directory
 app.use(express.static('public'));
