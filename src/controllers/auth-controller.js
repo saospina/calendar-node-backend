@@ -7,10 +7,10 @@ const User = require('../models/UserSchema');
 const createUser = async (req, res = response) => {
 
     const { email, password } = req.body;
-    
+
     try {
 
-        let user =  await User.findOne({ email });
+        let user = await User.findOne({ email });
         if (user) {
             res.status(400).json({
                 ok: false,
@@ -42,17 +42,48 @@ const createUser = async (req, res = response) => {
 
 
 // Login
-const login = (req, res = response) => {
+const login = async (req, res = response) => {
 
     const { password, email } = req.body;
 
+    try {
 
-    res.status(201).json({
-        hero: 'Goku',
-        msg: 'Login',
-        password,
-        email
-    })
+        const user = await User.findOne({ email })
+
+        if (!user) {
+            return res.status(400).json({
+                isAuthenticated: false,
+                msg: `User and password does not match,  please try again`
+            })
+        };
+
+        const validPassword = bcrypt.compareSync(password, user.password)
+
+        if (!validPassword) {
+            return res.status(400).json({
+                isAuthenticated: false,
+                msg: 'Invalid password or email, please try again'
+            })
+        };
+
+        res.status(200).json({
+            isAuthenticated: true,
+            uid: user.id,
+            name: user.name
+        })
+
+
+
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({
+            isAuthenticated: false,
+            msg: 'An error occurred, please try again'
+        })
+
+    }
+
+
 };
 
 const renewToken = (req, res = response) => {
