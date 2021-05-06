@@ -1,0 +1,21 @@
+{
+  "name": "calendar-node-backend",
+  "version": "1.0.0",
+  "description": "MERN Back-end for a Calendar app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Anthony",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "mongoose": "^5.12.7"
+  }
+}
