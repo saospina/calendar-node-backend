@@ -9,7 +9,7 @@ const { validateJWT } = require('../middlewares/jwt-validator');
 router.post(
     '/register',
     [
-        check('name', 'name is needed').not().isEmpty(),
+        check('name', 'name is needed').not().isEmpty(), // que siempre tenga informacion
         check('email', 'email is needed').isEmail(),
         check('password', 'password needs more than 3 characters').isLength({ min: 3 }),
         validatorFields
