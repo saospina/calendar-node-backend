@@ -106,7 +106,9 @@ const renewToken = async (req, res = response) => {
     const token = await generateJWT(uid, name);
     res.status(200).json({
         isAuthenticated: true,
-        token
+        token,
+        uid,
+        name
     })
 };
 
