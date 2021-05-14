@@ -25,6 +25,9 @@ app.use(express.static('public'));
 app.use(express.json());
 
 //ROUTES
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/public/index.html'));
+});
 //auth
 app.use('/api/auth', indexRoutesAuth);
 //events all
