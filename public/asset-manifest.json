@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/calendar-react-mern/static/css/main.81fdaa6e.chunk.css",
+    "main.js": "/calendar-react-mern/static/js/main.7daeedb7.chunk.js",
+    "main.js.map": "/calendar-react-mern/static/js/main.7daeedb7.chunk.js.map",
+    "runtime-main.js": "/calendar-react-mern/static/js/runtime-main.5ce4194d.js",
+    "runtime-main.js.map": "/calendar-react-mern/static/js/runtime-main.5ce4194d.js.map",
+    "static/css/2.b71957ff.chunk.css": "/calendar-react-mern/static/css/2.b71957ff.chunk.css",
+    "static/js/2.48b9c1cc.chunk.js": "/calendar-react-mern/static/js/2.48b9c1cc.chunk.js",
+    "static/js/2.48b9c1cc.chunk.js.map": "/calendar-react-mern/static/js/2.48b9c1cc.chunk.js.map",
+    "index.html": "/calendar-react-mern/index.html",
+    "static/css/2.b71957ff.chunk.css.map": "/calendar-react-mern/static/css/2.b71957ff.chunk.css.map",
+    "static/css/main.81fdaa6e.chunk.css.map": "/calendar-react-mern/static/css/main.81fdaa6e.chunk.css.map",
+    "static/js/2.48b9c1cc.chunk.js.LICENSE.txt": "/calendar-react-mern/static/js/2.48b9c1cc.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5ce4194d.js",
+    "static/css/2.b71957ff.chunk.css",
+    "static/js/2.48b9c1cc.chunk.js",
+    "static/css/main.81fdaa6e.chunk.css",
+    "static/js/main.7daeedb7.chunk.js"
+  ]
+}
